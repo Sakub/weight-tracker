@@ -1,34 +1,34 @@
 .home {
-    position: relative;
-    height: 100vh;
-    overflow-y: hidden;
+  position: relative;
+  height: 100vh;
+  overflow-y: hidden;
 }
 
 .home__header {
-    width: 80%;
-    padding: 15px;
+  width: 80%;
+  padding: 15px;
 }
 
 .header__text {
-    font-size: 2.5rem;
-    font-weight: bold;
-    line-height: 1.3em;
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.3em;
 }
 
 .home .button {
-    position: absolute;
-    bottom: 35px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    font-size: 2em;
-    /*display: block;*/
-    /*margin: min(50px 5%);*/
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  font-size: 2em;
+  /*display: block;*/
+  /*margin: min(50px 5%);*/
 }
 
 .home__svg {
-    width: 95%;
-    /* position: absolute;
+  width: 95%;
+  /* position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); */

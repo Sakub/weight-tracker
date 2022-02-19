@@ -37,10 +37,10 @@ body {
 .button-accent {
   color: var(--text-primary);
   background-color: var(--color-accent);
-  transition: background-color .3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
-.button-accent:focus, .button-accent:hover {
+.button-accent:focus,
+.button-accent:hover {
   background-color: var(--color-accent-focus);
 }
-
