@@ -3,5 +3,44 @@
   --bg-secondary: #1b1d24;
   --text-primary: #fff;
   --color-accent: #00b0ff;
+  --color-accent-focus: #058bc7;
   --color-accent-inactive: #043d56;
 }
+
+body {
+  margin: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: sans-serif;
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.text-accent--inactive {
+  color: var(--color-accent-inactive);
+}
+
+.home__svgWrapper {
+  text-align: center;
+}
+
+.button {
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button-accent {
+  color: var(--text-primary);
+  background-color: var(--color-accent);
+  transition: background-color .3s ease-in-out;
+}
+
+.button-accent:focus, .button-accent:hover {
+  background-color: var(--color-accent-focus);
+}
+
