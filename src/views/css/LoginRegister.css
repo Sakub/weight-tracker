@@ -1,0 +1,100 @@
+.view {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+
+.view__block {
+  position: absolute;
+  width: 100%;
+  bottom: -100%;
+  height: calc(60% - 30px);
+  background-color: var(--bg-secondary);
+  border-radius: 25px 25px 0 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.view__form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.view__title {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.view__title,
+.view__form {
+  padding: 0 20px;
+}
+
+.view__svgWrapper {
+  width: 95%;
+  margin-top: 40px;
+}
+
+.view__svgWrapper img {
+  width: 100%;
+}
+
+.form__button {
+  width: 150px;
+  font-size: 1.2rem;
+}
+
+.form__inputWrap {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  position: relative;
+}
+
+.form__label {
+  position: absolute;
+  bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.form__label svg {
+  margin: 0 3px;
+}
+
+.form__input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--color-accent);
+  outline: none;
+  color: #fff;
+}
+
+.form__redirect {
+  font-size: 0.9rem;
+}
+
+.form__inputWrap:focus-within .form__label,
+.form__input:not(:placeholder-shown) ~ .form__label {
+  bottom: 20px;
+  color: var(--color-accent);
+}
+
+.form__input::placeholder {
+  color: transparent;
+}
+
+.slideUp {
+  animation: slideUp 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideUp {
+  from {
+    bottom: -100%;
+  }
+  to {
+    bottom: 0;
+  }
+}

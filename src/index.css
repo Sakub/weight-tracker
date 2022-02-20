@@ -6,12 +6,24 @@
   --color-accent-focus: #058bc7;
   --color-accent-inactive: #043d56;
 }
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
+  overflow-y: hidden;
   background-color: var(--bg-primary);
   color: var(--text-primary);
   font-family: sans-serif;
+}
+
+a,
+a:visited {
+  color: var(--color-accent);
+  text-decoration: none;
 }
 
 .text-accent {
@@ -22,16 +34,14 @@ body {
   color: var(--color-accent-inactive);
 }
 
-.home__svgWrapper {
-  text-align: center;
-}
-
 .button {
   border: none;
   padding: 10px;
   border-radius: 10px;
   font-weight: bold;
   cursor: pointer;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
 }
 
 .button-accent {
