@@ -1,12 +1,8 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faUser, faLock } from "@fortawesome/free-solid-svg-icons";
 
 const RegisterForm = () => {
-  const [value, setValue] = useState(0);
-
-  const forceUpdate = () => setValue(value + 1);
   return (
     <form className="view__form">
       <div className="form__inputWrap">
@@ -53,10 +49,8 @@ const RegisterForm = () => {
         REGISTER
       </button>
       <p className={"form__redirect"}>
-        Already have an account?{" "}
-        <Link onClick={forceUpdate} to="/login">
-          Log In
-        </Link>
+        Already have an account?
+        <Link to="/login">Log In</Link>
       </p>
     </form>
   );
