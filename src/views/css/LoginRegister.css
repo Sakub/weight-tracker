@@ -85,16 +85,12 @@
   color: transparent;
 }
 
-.slideUp {
-  animation: slideUp 0.5s ease-in-out;
-  animation-fill-mode: forwards;
+.form__input::-webkit-outer-spin-button,
+.form__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-@keyframes slideUp {
-  from {
-    bottom: -100%;
-  }
-  to {
-    bottom: 0;
-  }
+.form__input[type="number"] {
+  -moz-appearance: textfield;
 }

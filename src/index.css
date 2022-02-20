@@ -17,7 +17,7 @@ body {
   overflow-y: hidden;
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  font-family: sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 a,
@@ -53,4 +53,32 @@ a:visited {
 .button-accent:focus,
 .button-accent:hover {
   background-color: var(--color-accent-focus);
+}
+
+.slideUp {
+  animation: slideUp 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.slideDown {
+  animation: slideDown 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideUp {
+  from {
+    bottom: -100%;
+  }
+  to {
+    bottom: 0;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
 }

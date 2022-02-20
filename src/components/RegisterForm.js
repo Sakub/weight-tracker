@@ -49,8 +49,7 @@ const RegisterForm = () => {
         REGISTER
       </button>
       <p className={"form__redirect"}>
-        Already have an account?
-        <Link to="/login">Log In</Link>
+        Already have an account? <Link to="/login">Log In</Link>
       </p>
     </form>
   );
