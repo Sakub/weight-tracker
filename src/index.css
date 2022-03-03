@@ -34,6 +34,14 @@ a:visited {
   color: var(--color-accent-inactive);
 }
 
+.text-bold {
+  font-weight: bold;
+}
+
+.text-regular {
+  font-weight: normal;
+}
+
 .button {
   border: none;
   padding: 10px;
@@ -55,6 +63,19 @@ a:visited {
   background-color: var(--color-accent-focus);
 }
 
+/*.scrollable::-webkit-scrollbar {
+  background-color: var(--color-accent-inactive);
+}
+
+.scrollable::-webkit-scrollbar-track {
+  background-color: var(--color-accent);
+}*/
+
+.scrollable.scrollable-y {
+  overflow-y: scroll;
+  height: 220px;
+}
+
 .slideUp {
   animation: slideUp 0.5s ease-in-out;
   animation-fill-mode: forwards;
@@ -62,6 +83,11 @@ a:visited {
 
 .slideDown {
   animation: slideDown 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.fadeIn {
+  animation: fadeIn 0.7s ease-in-out;
   animation-fill-mode: forwards;
 }
 
@@ -80,5 +106,14 @@ a:visited {
   }
   to {
     top: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
