@@ -47,7 +47,7 @@ const Dashboard = () => {
           {currentTab === TABS.GENERAL ? (
             <CurrentWeightForm />
           ) : (
-            <WeightHistory/>
+            <WeightHistory />
           )}
         </div>
       </div>
