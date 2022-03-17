@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -11,6 +11,8 @@ import {
   Legend,
 } from "chart.js";
 
+import WeightContext from "../contexts/WeightContext";
+
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -22,44 +24,13 @@ ChartJS.register(
 );
 
 const WeightChart = () => {
-  const [weightHistory, setWeightHistory] = useState([
-    {
-      day: "12",
-      weekDay: "Mon",
-      month: "January",
-      weight: 60,
-    },
-    {
-      day: "17",
-      weekDay: "Tue",
-      month: "January",
-      weight: 65,
-    },
-    {
-      day: "18",
-      weekDay: "Sun",
-      month: "January",
-      weight: 73,
-    },
-    {
-      day: "19",
-      weekDay: "Frid",
-      month: "January",
-      weight: 65,
-    },
-    {
-      day: "20",
-      weekDay: "Mon",
-      month: "January",
-      weight: 65,
-    },
-  ]);
+  const weightHistory = useContext(WeightContext);
 
   const labels = weightHistory.map(
     (entry) => `${entry.day} ${entry.month.slice(0, 3)}`
   );
 
-  const chartGridColor = "rgba(255, 255, 255, 0.2)"
+  const chartGridColor = "rgba(255, 255, 255, 0.2)";
 
   const [options, setOptions] = useState({
     responsive: true,

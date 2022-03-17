@@ -5,6 +5,8 @@
   --color-accent: #00b0ff;
   --color-accent-focus: #058bc7;
   --color-accent-inactive: #043d56;
+  --color-danger: #ee210c;
+  --color-danger-focus: #d02b1a;
 }
 *,
 *::after,
@@ -63,13 +65,16 @@ a:visited {
   background-color: var(--color-accent-focus);
 }
 
-/*.scrollable::-webkit-scrollbar {
-  background-color: var(--color-accent-inactive);
+.button-danger {
+  color: var(--text-primary);
+  background-color: var(--color-danger);
+  transition: background-color 0.3s ease-in-out;
 }
 
-.scrollable::-webkit-scrollbar-track {
-  background-color: var(--color-accent);
-}*/
+.button-danger:focus,
+.button-danger:hover {
+  background-color: var(--color-danger-focus);
+}
 
 .scrollable.scrollable-y {
   overflow-y: scroll;
@@ -88,6 +93,11 @@ a:visited {
 
 .fadeIn {
   animation: fadeIn 0.7s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.quickFadeIn {
+  animation: fadeIn 0.3s ease-in-out;
   animation-fill-mode: forwards;
 }
 
